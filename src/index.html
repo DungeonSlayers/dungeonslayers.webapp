@@ -8,25 +8,9 @@
         <meta name="viewport" content="width=device-width">
 
         <link rel="stylesheet" href="css/bootstrap.min.css">
-        <style>
-        /*
-            body {
-                padding-top: 50px;
-                padding-bottom: 20px;
-            }
-        */
-        </style>
-        <!--
-            <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-            <link rel="stylesheet" href="css/main.css">
-        -->
-
-        <!-- Add custom CSS here -->
+        <!-- <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
+        <link rel="stylesheet" href="css/main.css">
         <link href="css/simple-sidebar.css" rel="stylesheet">
-
-        <!--[if lt IE 9]>
-            <script src="js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
-        <![endif]-->
     </head>
     <body>
 
@@ -37,103 +21,122 @@
                 <ul class="sidebar-nav">
                     <li class="sidebar-brand"><a href="#">DungeonsSlayers</a>
                     </li>
-                    <li><a href="#armor">Armor</a>
+                    <li><a href="#armor">Rüstungen</a>
                     </li>
-                    <li><a href="#weapons">Weapons</a>
+                    <li><a href="#weapons">Nahkampf</a>
                     </li>
-                    <li><a href="#creation">Character Creation</a>
+                    <li><a href="#ranged">Fernwaffen</a>
+                    </li>
+                    <li><a href="#creation">Charaktererstellung</a>
                     </li>
                 </ul>
             </div>
 
             <!-- Page content -->
             <div id="page-content-wrapper">
-                <div class="content-header">
-                    <h1>
-                        <a id="menu-toggle" href="#" class="btn btn-default">
-                          <!-- <i class="icon-bar"></i> -->
-                          <span class="glyphicon glyphicon-align-justify"></span>
-                        </a>
-                        Headline
-                    </h1>
-                </div>
-                <!-- Keep all page content within the page-content inset div! -->
                 <div class="page-content inset">
+                    <!-- RÜSTUNGEN -->
+                    <a name="armor"></a>
+                    <div>
+                        <h1>
+                            <a id="menu-toggle" href="#" class="btn btn-default">
+                              <!-- <i class="icon-bar"></i> -->
+                              <span class="glyphicon glyphicon-align-justify"></span>
+                            </a>
+                            <img src="icons/breastplate.svg" class="invert">
+                            Rüstungen
+                        </h1>
+                    </div>
+                    <!-- Keep all page content within the page-content inset div! -->
                     <div class="row">
-                        <div class="col-md-12">
-                            <p class="lead">This simple sidebar template has a hint of JavaScript to make the template responsive. It also includes Font Awesome icon fonts.</p>
+                        <div class="table-responsive">
+                          <table class="table table-bordered data-armor table-striped tablesorter">
+                            <thead>
+                              <tr>
+                                <th class="id">Name</th>
+                                <th class="center">PA</th>
+                                <th class="center">IN</th>
+                                <th class="center">BE</th>
+                                <th>Besonderes</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                          </table>
                         </div>
-                        <div class="col-md-6">
-                            <p class="well">The template still uses the default Bootstrap rows and columns.</p>
+                    </div>
+
+                    <!-- WAFFEN -->
+                    <a name="weapons"></a>
+                    <div>
+                        <h1>
+                            <h1>
+                            <a id="menu-toggle" href="#" class="btn btn-default">
+                              <!-- <i class="icon-bar"></i> -->
+                              <span class="glyphicon glyphicon-align-justify"></span>
+                            </a>
+                            <img src="icons/battle-axe.svg" class="invert">
+                            Nahkampf
+                        </h1>
+                    </div>
+                    <div class="row weapons">
+                        <div class="table-responsive">
+                          <table class="table table-bordered data-weapons table-striped tablesorter">
+                            <thead>
+                              <tr>
+                                <th class="id">Name</th>
+                                <th class="center">WB</th>
+                                <th class="center">IN</th>
+                                <th class="center">GA</th>
+                                <th>Special</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                          </table>
                         </div>
-                        <div class="col-md-6">
-                            <p class="well">But the full-width layout means that you wont be using containers.</p>
-                        </div>
-                        <div class="col-md-4">
-                            <p class="well">Three Column Example</p>
-                        </div>
-                        <div class="col-md-4">
-                            <p class="well">Three Column Example</p>
-                        </div>
-                        <div class="col-md-4">
-                            <p class="well">You get the idea! Do whatever you want in the page content area!</p>
+                    </div>
+
+                    <!-- DISTANCE -->
+                    <a name="ranged"></a>
+                    <div>
+                        <h1>
+                            <h1>
+                            <a id="menu-toggle" href="#" class="btn btn-default">
+                              <!-- <i class="icon-bar"></i> -->
+                              <span class="glyphicon glyphicon-align-justify"></span>
+                            </a>
+                            <img src="icons/archery-target.svg" class="invert">
+                            Fernkampf
+                        </h1>
+                    </div>
+                    <div class="row weapons">
+                        <div class="table-responsive">
+                          <table class="table table-bordered data-ranged table-striped tablesorter">
+                            <thead>
+                              <tr>
+                                <th class="id">Name</th>
+                                <th class="center">WB</th>
+                                <th class="center">IN</th>
+                                <th class="center">GA</th>
+                                <th>Special</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                          </table>
                         </div>
                     </div>
                 </div>
-
-            </div>
-
-        </div>
-
-        <!--
-        <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">Project name</a>
-                </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something else here</a></li>
-                                <li class="divider"></li>
-                                <li class="dropdown-header">Nav header</li>
-                                <li><a href="#">Separated link</a></li>
-                                <li><a href="#">One more separated link</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-
-                </div>
             </div>
         </div>
-        -->
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
         <script src="js/vendor/bootstrap.min.js"></script>
-        <!--
+        <script src="js/vendor/jquery.tablesorter.min.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
-        -->
 
-        <!-- Custom JavaScript for the Menu Toggle -->
-        <script>
-        $("#menu-toggle").click(function(e) {
-            e.preventDefault();
-            $('#wrapper').toggleClass('active');
-        });
-        </script>
     </body>
 </html>
