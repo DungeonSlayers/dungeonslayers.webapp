@@ -32,11 +32,13 @@ function addArmor() {
         $table.append(node);
     };
 
-    $.getJSON( "https://rawgithub.com/DungeonSlayers/dungeonslayers.json/master/data-min/deu/armor.min.json", function(data) {
+    $.getJSON('https://rawgithub.com/DungeonSlayers/dungeonslayers.json/master/data-min/deu/armor.min.json', function(data) {
         $.each(data.armor, function(id, value) {
             add(value);
           });
-        $('.data-armor').tablesorter();
+       $('.data-armor').tablesorter({
+            sortList: [[0,0]]
+        });
     });
 }
 
@@ -72,12 +74,18 @@ function addWeapons() {
         }
     };
 
-    $.getJSON( "https://rawgithub.com/DungeonSlayers/dungeonslayers.json/master/data-min/deu/weapons.min.json", function(data) {
+    $.getJSON( 'https://rawgithub.com/DungeonSlayers/dungeonslayers.json/master/data-min/deu/weapons.min.json', function(data) {
         $.each(data.weapons, function(id, value) {
             add(value);
         });
-        $('.data-weapons').tablesorter();
-        $('.data-ranged').tablesorter();
+        //$('.data-weapons').tablesorter();
+
+         $('.data-weapons').tablesorter({
+            sortList: [[0,0]]
+          });
+        $('.data-ranged').tablesorter({
+            sortList: [[0,0]]
+        });
     });
 
 }
