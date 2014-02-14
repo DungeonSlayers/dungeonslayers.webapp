@@ -1,4 +1,4 @@
-ds-characters
+dungeons
 =============
 
 html/js toolset for the great tabletop rpg dungeonslayers(.com)
