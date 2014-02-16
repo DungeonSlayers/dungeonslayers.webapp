@@ -7,6 +7,7 @@ module.exports = function (grunt) {
     // Initializes the Grunt tasks with the following settings
     grunt.initConfig({
         pkg: pkg,
+        jshint:  require('./tasks/jshint.js'),
         'curl-dir': {
           'src/icons' : [
             //'http://game-icons.net/archives/svg/zip/game-icons.net.svg.zip',
@@ -29,9 +30,11 @@ module.exports = function (grunt) {
 
     // Load the plugins that provide the tasks we specified in package.json.
     grunt.loadNpmTasks('grunt-curl');
+    grunt.loadNpmTasks('grunt-contrib-jshint');
 
 
     //get font
-    grunt.registerTask('default', ['curl-dir']);
+    grunt.registerTask('curl', ['curl-dir']);
+    grunt.registerTask('default', ['jshint']);
 
 };

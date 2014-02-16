@@ -1,14 +1,14 @@
 require.config({
     paths: {
         'bootstrap': 'vendor/bootstrap',
-        'backbone': 'vendor/backbone',
-        'lodash': 'vendor/lodash'
+        // 'backbone': 'vendor/backbone',
+        // 'lodash': 'vendor/lodash'
     },
     shim: {
-        'backbone': {
-            deps: ['lodash', 'jquery'],
-            exports: 'Backbone'
-        },
+        // 'backbone': {
+        //     deps: ['lodash', 'jquery'],
+        //     exports: 'backbone'
+        // },
         'lodash': {
             exports: '_'
         }
@@ -16,7 +16,7 @@ require.config({
 });
 
 
-require([], function () {
+require(['character'], function () {
 
     'use strict';
 
@@ -51,7 +51,7 @@ require([], function () {
 
             //dom
             $table.append(node);
-        };
+        }
 
         $.getJSON('https://rawgithub.com/DungeonSlayers/dungeonslayers.json/master/data-min/deu/armor.min.json', function(data) {
             $.each(data.armor, function(id, value) {
@@ -93,7 +93,7 @@ require([], function () {
             } else {
                 $('.data-ranged tbody').append(node);
             }
-        };
+        }
 
         $.getJSON( 'https://rawgithub.com/DungeonSlayers/dungeonslayers.json/master/data-min/deu/weapons.min.json', function(data) {
             $.each(data.weapons, function(id, value) {

@@ -17,6 +17,13 @@ th.id {
     margin-left: 0;
 }
 
+
+.attribute {
+    margin: 10px 40px;
+    width: 100px;
+    float: left;
+}
+
 .invert {
     -webkit-filter: invert(100%);
     height: 48px;
