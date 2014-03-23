@@ -20,14 +20,16 @@
             <div id="sidebar-wrapper">
                 <ul class="sidebar-nav">
                     <li class="sidebar-brand"><a href="#">DungeonsSlayers</a>
+                    <li><a href="#characters">Charakter</a>
                     </li>
-                    <li><a href="#armor">Rüstungen</a>
                     </li>
-                    <li><a href="#weapons">Nahkampf</a>
+                    <li><a href="#weapons">Nahkampfwaffen</a>
                     </li>
                     <li><a href="#ranged">Fernwaffen</a>
                     </li>
-                    <li><a href="#creation">Charaktererstellung</a>
+                    <li><a href="#armor">Rüstungen</a>
+                    </li>
+                    <li><a href="#talents">Talente</a>
                     </li>
                 </ul>
             </div>
@@ -51,38 +53,9 @@
                     </div>
                     <div class="row characters">
                     </div>
-
-
-                    <!-- RÜSTUNGEN -->
-                    <a name="armor"></a>
-                    <div>
-                        <h1>
-                            <a id="menu-toggle" href="#" class="btn btn-default">
-                              <!-- <i class="icon-bar"></i> -->
-                              <span class="glyphicon glyphicon-align-justify"></span>
-                            </a>
-                            <img src="icons/breastplate.svg" class="invert">
-                            Rüstungen
-                        </h1>
+                    <div class="row messages">
                     </div>
-                    <!-- Keep all page content within the page-content inset div! -->
-                    <div class="row">
-                        <div class="table-responsive">
-                          <table class="table table-bordered data-armor table-striped tablesorter" data-sortlist="[[0,0]]">
-                            <thead>
-                              <tr>
-                                <th class="id">Name</th>
-                                <th class="center">PA</th>
-                                <th class="center">IN</th>
-                                <th class="center">BE</th>
-                                <th>Besonderes</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                            </tbody>
-                          </table>
-                        </div>
-                    </div>
+
 
                     <!-- WAFFEN -->
                     <a name="weapons"></a>
@@ -146,6 +119,81 @@
                         </div>
                     </div>
 
+
+                    <!-- RÜSTUNGEN -->
+                    <a name="armor"></a>
+                    <div>
+                        <h1>
+                            <a id="menu-toggle" href="#" class="btn btn-default">
+                              <!-- <i class="icon-bar"></i> -->
+                              <span class="glyphicon glyphicon-align-justify"></span>
+                            </a>
+                            <img src="icons/breastplate.svg" class="invert">
+                            Rüstungen
+                        </h1>
+                    </div>
+                    <!-- Keep all page content within the page-content inset div! -->
+                    <div class="row">
+                        <div class="table-responsive">
+                          <table class="table table-bordered data-armor table-striped tablesorter" data-sortlist="[[0,0]]">
+                            <thead>
+                              <tr>
+                                <th class="id">Name</th>
+                                <th class="center">PA</th>
+                                <th class="center">IN</th>
+                                <th class="center">BE</th>
+                                <th>Besonderes</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                          </table>
+                        </div>
+                    </div>
+
+
+                    <!-- TALENTS -->
+                    <a name="talens"></a>
+                    <div>
+                        <h1>
+                            <a id="menu-toggle" href="#" class="btn btn-default">
+                              <!-- <i class="icon-bar"></i> -->
+                              <span class="glyphicon glyphicon-align-justify"></span>
+                            </a>
+                            <img src="icons/juggler.svg" class="invert">
+                            Talente
+                        </h1>
+                    </div>
+
+                    <!-- filter -->
+                    <span class="form-group selects">
+                        <label>Class</label>
+                        <select class="form-control" id="talent-class"></select>
+                    </span>
+                    <span class="form-group selects">
+                        <label>Level</label>
+                        <select class="form-control" id="talent-level"></select>
+                    </span>
+
+
+                    <!-- Keep all page content within the page-content inset div! -->
+                    <div class="row">
+                        <div class="table-responsive">
+                          <table class="table table-bordered data-talents tablesorter" data-sortlist="[[0,0]]">
+                            <thead>
+                              <tr>
+                                <th class="id">Name</th>
+                                <th>Stufe</th>
+                                <th>Ränge</th>
+                                <th class="center">Zusammenfassung</th>
+                                <th class="center">Details</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                          </table>
+                        </div>
+                    </div>
 
                 </div>
             </div>
