@@ -36,8 +36,14 @@ th.id {
     padding-bottom: 8px;
 }
 
+.combat-values {
+    display: flex;
+}
+
 .combat-value {
-    float: left;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    flex: 1 0 auto;
     width: 70px;
     height: 70px;
     background-size: 70px;
