@@ -100,10 +100,10 @@ define('character/main', ['character/model', 'character/view'], function (model,
 
         //calculate 'battlevalues'
         var calc = function () {
-            var hp = item.get('body') + item.get('constituation') + 10;
+            var hp = item.get('body') + item.get('constitution') + 10;
             change('hit-points', hp);
 
-            var defense = item.get('body') + item.get('constituation');
+            var defense = item.get('body') + item.get('constitution');
             change('defense', defense);
 
             var initiative = item.get('agility') + item.get('mobility');

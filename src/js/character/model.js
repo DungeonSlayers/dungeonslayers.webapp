@@ -10,7 +10,7 @@ define('character/model', [], function () {
             mind: 0,
             //traits
             strength: 0, //8, max 4
-            constituation: 0,
+            constitution: 0,
             agility: 0,
             dexterty: 0,
             intellect: 0,
@@ -70,10 +70,10 @@ define('character/model', [], function () {
             // }
 
             // //max
-            // if (attrs.strength > TRAITLIMIT || attrs.constituation  > TRAITLIMIT || attrs.agility > TRAITLIMIT || attrs.dexterty > TRAITLIMIT || attrs.intellect  > TRAITLIMIT || attrs.aura > TRAITLIMIT) {
+            // if (attrs.strength > TRAITLIMIT || attrs.constitution  > TRAITLIMIT || attrs.agility > TRAITLIMIT || attrs.dexterty > TRAITLIMIT || attrs.intellect  > TRAITLIMIT || attrs.aura > TRAITLIMIT) {
             //     var invalid = [];
             //     if (attrs.strength > TRAITLIMIT) invalid.push('strength');
-            //     if (attrs.constituation > TRAITLIMIT) invalid.push('constituation');
+            //     if (attrs.constitution > TRAITLIMIT) invalid.push('constitution');
             //     if (attrs.agility > TRAITLIMIT) invalid.push('agility');
             //     if (attrs.dexterty > TRAITLIMIT) invalid.push('dexterty');
             //     if (attrs.intellect > TRAITLIMIT) invalid.push('intellect');
@@ -82,10 +82,10 @@ define('character/model', [], function () {
             //     errors.push({name: 'trails_limit', message: 'Greater than ' + TRAITLIMIT, invalid: invalid});
             // }
             // //points
-            // if (attrs.strength + attrs.constituation + attrs.agility + attrs.dexterty + attrs.intellect + attrs.aura > TRAITPOINTS) {
+            // if (attrs.strength + attrs.constitution + attrs.agility + attrs.dexterty + attrs.intellect + attrs.aura > TRAITPOINTS) {
             //     var invalid = [];
             //     invalid.push('strength');
-            //     invalid.push('constituation');
+            //     invalid.push('constitution');
             //     invalid.push('agility');
             //     invalid.push('dexterty');
             //     invalid.push('intellect');
