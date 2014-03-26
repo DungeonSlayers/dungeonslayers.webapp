@@ -36,40 +36,42 @@ define('character/main', ['character/model', 'character/view'], function (model,
             list.add(item);
         }
 
-        var showErrors = function (errors) {
-                _.each(errors, function (error) {
-                    var controlGroup = this.$('.' + error.name);
-                    controlGroup.addClass('error');
-                    controlGroup.find('.help-inline').text(error.message);
-                }, this);
-            },
-            hideErrors = function () {
-                this.$('.control-group').removeClass('error');
-                this.$('.help-inline').text('');
-            };
+        // var showErrors = function (errors) {
+        //         _.each(errors, function (error) {
+        //             var controlGroup = this.$('.' + error.name);
+        //             controlGroup.addClass('error');
+        //             controlGroup.find('.help-inline').text(error.message);
+        //         }, this);
+        //     },
+        //     hideErrors = function () {
+        //         this.$('.control-group').removeClass('error');
+        //         this.$('.help-inline').text('');
+        //     };
 
 
-        var options = {
-            success: function () {
-                hideErrors();
-            },
-            error: function (model, errors) {
-                showErrors(errors);
-            }
-        };
+        // var options = {
+        //     success: function () {
+        //         hideErrors();
+        //     },
+        //     error: function (model, errors) {
+        //         showErrors(errors);
+        //     }
+        // };
 
-        var horst = function () {
-        };
-        var feedback = {
-            email: horst,
-            website:  horst,
-            feedback: horst
-        };
+        // var horst = function () {
+        // };
+        // var feedback = {
+        //     email: horst,
+        //     website:  horst,
+        //     feedback: horst
+        // };
+        //
+        var feedback, options;
 
         //register save
         item.on('change', function () {
             console.warn('Save');
-            //item.save(feedback, options);
+            item.save(feedback, options);
         });
 
         //create/draw view
