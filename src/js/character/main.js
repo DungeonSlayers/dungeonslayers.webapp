@@ -77,7 +77,7 @@ define('character/main', ['character/model', 'character/view'], function (model,
             model: item
         });
 
-
+        //change a 'battlevalue' value and animate
         var change = function (id, value) {
             var node = $('#' + id),
                 fieldval = $('#' + id).text(),
@@ -96,6 +96,7 @@ define('character/main', ['character/model', 'character/view'], function (model,
             }
         };
 
+        //calculate 'battlevalues'
         var calc = function () {
             var hp = item.get('body') + item.get('constituation') + 10;
             change('hit-points', hp);
@@ -122,10 +123,14 @@ define('character/main', ['character/model', 'character/view'], function (model,
             change('targeted-spellcasting', ts);
         };
 
+        //recalculate on change
         item.on('change', calc);
-        calc();
 
+        //draw
         itemView.render();
+
+        //initally calculate
+        calc();
     };
 
     return {
