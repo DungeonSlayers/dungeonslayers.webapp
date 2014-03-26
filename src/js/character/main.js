@@ -84,7 +84,7 @@ define('character/main', ['character/model', 'character/view'], function (model,
             var node = $('#' + id),
                 fieldval = $('#' + id).text(),
                 current = parseFloat(fieldval === '' ? 0 : fieldval, 10),
-                color = current > value ? 'red' : 'green';
+                color = current > value ? 'red' : 'LimeGreen';
             node.text(value).finish();
             //animate
             if (current !== value && current !== 0) {
