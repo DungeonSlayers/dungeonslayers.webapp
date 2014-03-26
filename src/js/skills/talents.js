@@ -16,7 +16,7 @@ define('skills/talents', ['data'], function (data) {
                     $('<td>').text(data.name),
                     $('<td class="level">').text(''),
                     $('<td class="max">').text(''),
-                    $('<td>').text(data.short || ''),
+                    $('<td>').text(data.compact || ''),
                     $('<td>').text(data.details)
                 );
 
