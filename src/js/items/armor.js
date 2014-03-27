@@ -14,8 +14,8 @@ define('items/armor', ['data'], function (data) {
                 node.append(
                     $('<td>').text(data.name),
                     $('<td class="center">').text(data.armorvalue),
-                    $('<td class="center">').text(data.initiative),
-                    $('<td class="center">').text(data.movementrate),
+                    $('<td class="center">').text(data.initiative === 0 ? '' : data.initiative),
+                    $('<td class="center">').text(data.movementrate === 0 ? '' : data.movementrate),
                     $('<td>').text(data.special)
                 );
 

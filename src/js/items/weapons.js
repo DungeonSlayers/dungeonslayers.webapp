@@ -13,15 +13,15 @@ define('items/weapons', ['data'], function (data) {
                 node.append(
                     $('<td>').text(data.name),
                     $('<td class="center">').text(data.weaponbonus),
-                    $('<td class="center">').text(data.initative),
-                    $('<td class="center">').text(data.opponentdefense),
+                    $('<td class="center">').text(data.initiative === 0 ? '' : data.initiative),
+                    $('<td class="center">').text(data.opponentdefense === 0 ? '' : data.opponentdefense),
                     $('<td>').text(data.special)
                 );
 
                  //colorize
-                if (data.initative < 0)
+                if (data.initiative < 0)
                     $(node.children()[2]).addClass('red');
-                if (data.opponentdefense > 0)
+                if (data.opponentdefense < 0)
                     $(node.children()[3]).addClass('red');
 
                 //separate items dom

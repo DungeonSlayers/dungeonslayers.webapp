@@ -14,8 +14,8 @@ define('skills/talents', ['data'], function (data) {
                 //create node
                 node.append(
                     $('<td>').text(data.name),
-                    $('<td class="level">').text(''),
-                    $('<td class="max">').text(''),
+                    $('<td class="level center">').text(''),
+                    $('<td class="max center">').text(''),
                     $('<td>').text(data.compact || ''),
                     $('<td>').text(data.details)
                 );
