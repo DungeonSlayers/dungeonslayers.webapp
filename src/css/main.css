@@ -21,9 +21,15 @@ th.id {
 }
 
 .selects {
-    margin: 6px 30px 0px 0px;
+    margin: 6px 30px 16px 0px;
     width: 166px;
     float: left;
+}
+
+.section {
+    box-shadow: 0 8px 20px -8px #333333;
+    padding: 6px 16px 16px 16px;
+    margin-bottom: 16px;
 }
 
 .characters {
@@ -46,7 +52,7 @@ th.id {
 }
 
 .combat-values {
-    margin-top: 10px;
+    margin-top: 12px;
     display: flex;
 }
 
