@@ -8,17 +8,32 @@ define('skills/talents', ['data'], function (data) {
 
             var hash = {};
 
+            Opentip.styles.ds = {
+                title: 'hover',
+                showOn: 'mouseover',
+                target: true,
+                stem: false,
+                tipJoint: 'right',
+                group: 'tags',
+                extends: 'dark' //glass
+            };
+
             function add(id, data) {
                 var node = $('<tr>').attr('data-id', id);
 
                 //create node
                 node.append(
+                    $('<td class="details">').append(
+                        $('<span class="glyphicon glyphicon-exclamation-sign">')
+                    ),
                     $('<td>').text(data.name),
                     $('<td class="level center">').text(''),
                     $('<td class="max center">').text(''),
-                    $('<td>').text(data.compact || ''),
-                    $('<td>').text(data.details)
+                    $('<td class="compact">').text(data.compact || '')
                 );
+
+                 // Now create an Opentip for each tag element
+                new Opentip(node.find('.details'), data.details, data.name, { style: 'ds' });
 
                 //separate items dom
                 $('.data-talents tbody').append(node);

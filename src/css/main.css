@@ -20,6 +20,18 @@ th.id {
     margin-left: 0;
 }
 
+.details {
+    text-align: center;
+}
+
+.details-header {
+    width: 40px;
+}
+
+.glyphicon {
+    font-size: 20px;
+}
+
 .selects {
     margin: 6px 30px 16px 0px;
     width: 166px;
