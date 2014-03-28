@@ -26,7 +26,7 @@ define('skills/talents', ['data'], function (data) {
                     $('<td class="details">').append(
                         $('<span class="glyphicon glyphicon-exclamation-sign">')
                     ),
-                    $('<td>').text(data.name),
+                    $('<td class="name">').text(data.name),
                     $('<td class="level center">').text(''),
                     $('<td class="max center">').text(''),
                     $('<td class="compact">').text(data.compact || '')
