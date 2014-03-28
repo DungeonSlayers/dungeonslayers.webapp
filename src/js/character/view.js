@@ -13,10 +13,10 @@ define('character/view', ['character/main', 'character/model'], function (charac
 
             this.append(span);
         },
-        addInput = function (name) {
+        addInput = function (name, label) {
             this.append(
                $('<span class="form-group attribute">').append(
-                    $('<label>').text(name),
+                    $('<label>').text(label || name),
                     $('<input type="number" class="form-control" placeholder="0">')
                         .attr('id', name)
                         .val(model.get(name))
@@ -61,21 +61,21 @@ define('character/view', ['character/main', 'character/model'], function (charac
             // forms.push(form);
 
             form = $('<form role="form" style="clear:both">');
-            addInput.call(form, 'body');
-            addInput.call(form, 'strength');
-            addInput.call(form, 'constituation');
+            addInput.call(form, 'body', 'Körper');
+            addInput.call(form, 'strength', 'Stärke');
+            addInput.call(form, 'constituation', 'Härte');
             forms.push(form);
 
             form = $('<form role="form" style="clear:both">');
-            addInput.call(form, 'mobility');
-            addInput.call(form, 'agility');
-            addInput.call(form, 'dexterty');
+            addInput.call(form, 'agility', 'Agilität');
+            addInput.call(form, 'mobility', 'Bewegung');
+            addInput.call(form, 'dexterty', 'Geschick');
             forms.push(form);
 
             form = $('<form role="form" style="clear:both">');
-            addInput.call(form, 'mind');
-            addInput.call(form, 'aura');
-            addInput.call(form, 'intellect');
+            addInput.call(form, 'mind', 'Geist');
+            addInput.call(form, 'intellect', 'Verstand');
+            addInput.call(form, 'aura', 'Aura');
             forms.push(form);
 
             //DOM
