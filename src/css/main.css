@@ -1,5 +1,13 @@
+@font-face {
+    font-family: Woodstamp;
+    src: url('../fonts/Woodstamp.otf');
+}
+
 th.id {
     max-width: 150px;
+}
+.sub {
+    padding-left: 20px;
 }
 .center {
    text-align: center;
@@ -11,9 +19,24 @@ th.id {
 .green {
     color: limegreen;
 }
-.row{
+.row {
     margin-left: 0px;
     margin-right: 0px;
+}
+
+h1 {
+    font-family: Woodstamp;
+    font-size: 60px;
+}
+
+h2 {
+    font-family: Woodstamp;
+    font-size: 38px;
+}
+
+
+.woodstamp {
+    font-family: Woodstamp;
 }
 
 .name {
