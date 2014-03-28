@@ -62,20 +62,20 @@ define('character/view', ['character/main', 'character/model'], function (charac
 
             form = $('<form role="form" style="clear:both">');
             addInput.call(form, 'body');
-            addInput.call(form, 'mobility');
-            addInput.call(form, 'mind');
-            forms.push(form);
-
-            form = $('<form role="form" style="clear:both">');
             addInput.call(form, 'strength');
-            addInput.call(form, 'agility');
-            addInput.call(form, 'intellect');
+            addInput.call(form, 'constituation');
             forms.push(form);
 
             form = $('<form role="form" style="clear:both">');
-            addInput.call(form, 'constituation');
+            addInput.call(form, 'mobility');
+            addInput.call(form, 'agility');
             addInput.call(form, 'dexterty');
+            forms.push(form);
+
+            form = $('<form role="form" style="clear:both">');
+            addInput.call(form, 'mind');
             addInput.call(form, 'aura');
+            addInput.call(form, 'intellect');
             forms.push(form);
 
             //DOM
