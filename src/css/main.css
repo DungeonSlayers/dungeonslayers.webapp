@@ -27,6 +27,7 @@ th.id {
 h1 {
     font-family: Woodstamp;
     font-size: 60px;
+    color: black;
 }
 
 h2 {
@@ -85,9 +86,9 @@ h2 {
 
 .invert {
     -webkit-filter: invert(100%);
-    height: 48px;
-    width: 48px;
-    padding-bottom: 8px;
+    height: 54px;
+    width: 54px;
+    padding-bottom: 5px;
 }
 
 .combat-values {
