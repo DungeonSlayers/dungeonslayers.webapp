@@ -88,13 +88,9 @@ define('character/main', ['character/model', 'character/view'], function (model,
             node.text(value).finish();
             //animate
             if (current !== value && current !== 0) {
-                node.css('color', color)
-                    .animate({fontSize: '20px'})
-                    .animate({fontSize: '12px'})
-                    .animate({fontSize: '16px'})
-                    .animate({fontSize: '16px'}, function () {
-                        $(this).css('color', 'black');
-                    });
+                node.animate({fontSize: '60px'})
+                    .animate({fontSize: '28px'})
+                    .animate({fontSize: '44px'});
             }
         };
 
