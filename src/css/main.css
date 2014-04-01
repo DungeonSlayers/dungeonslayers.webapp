@@ -1,7 +1,29 @@
+/* font */
+
 @font-face {
     font-family: Woodstamp;
     src: url('../fonts/Woodstamp.otf');
 }
+
+.woodstamp {
+    font-family: Woodstamp;
+}
+
+.font-invert {
+    /*-webkit-text-stroke: 1px black;*/
+    /* TODO remove important */
+    color: white !important;
+    text-shadow:
+        -1px 0 black,
+         0 1px black,
+         1px 0 black,
+        0 -1px black
+}
+
+
+
+
+
 
 th.id {
     max-width: 150px;
@@ -36,20 +58,38 @@ h2 {
 }
 
 
-.woodstamp {
-    font-family: Woodstamp;
+/* view */
+
+.attribute.form-group {
+    margin-bottom: 0px;
+    display: inline-block;
+    min-width: 200px;
 }
 
-.font-invert {
-    /*-webkit-text-stroke: 1px black;*/
-    /* TODO remove important */
-    color: white !important;
-    text-shadow:
-        -1px 0 black,
-         0 1px black,
-         1px 0 black,
-        0 -1px black
+.attribute>label {
+    line-height: 75px;
+    float: left;
+    font-family: Woodstamp;
+    font-size: 40px;
+    font-weight: 100;
 }
+
+.attribute>.form-control {
+    float: right;
+    display: inline;
+    width: 70px;
+    height: 70px;
+    font-size: 50px;
+    font-family: Woodstamp;
+    color: rgb(51, 51, 51);
+    border-width: 3px solid rgb(51, 51, 51);
+    padding-bottom: 0;
+    padding-top: 0;
+}
+
+
+
+
 
 .name {
     width: 100px;

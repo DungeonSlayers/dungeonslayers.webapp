@@ -27,6 +27,9 @@ define('data', [], function () {
         getTalents: function () {
             return get('talents');
         },
+        getSpells: function () {
+            return get('spells');
+        },
         getWeapons: function () {
             return get('weapons');
         },

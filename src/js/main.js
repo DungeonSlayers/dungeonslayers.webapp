@@ -12,7 +12,8 @@ require.config({
 require(['character/main',
          'items/armor',
          'items/weapons',
-         'skills/talents'], function (character, armor, weapons, talents) {
+         'skills/talents',
+         'skills/spells'], function (character, armor, weapons, talents, spells) {
 
     'use strict';
 
@@ -23,6 +24,16 @@ require(['character/main',
                 e.preventDefault();
                 $('#wrapper').toggleClass('active');
             });
+
+        //hide content on nav click
+        $('.sidebar-nav').delegate('.navigation', 'click', function (e) {
+            var node = $(e.target),
+                section = node.attr('data-section-target');
+            $('.section').hide();
+            $('[data-section="' + section + '"]').show();
+            $(window).scrollTop(0);
+        });
+
     }
 
     //ready
@@ -32,5 +43,6 @@ require(['character/main',
         armor.init();
         weapons.init();
         talents.init();
+        spells.init();
     });
 });

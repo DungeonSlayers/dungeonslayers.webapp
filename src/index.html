@@ -21,16 +21,18 @@
             <div id="sidebar-wrapper">
                 <ul class="sidebar-nav">
                     <!-- <li class="sidebar-brand"><a href="#">DungeonsSlayers</a> -->
-                    <li><h2><a href="#characters">Charakter</a></h2>
+                    <li><h2><a href="#characters" data-section-target="characters" class="navigation">Charakter</a></h2>
                     </li>
                     </li>
-                    <li><h2><a href="#weapons">Nahkampfwaffen</a></h2>
+                    <li><h2><a href="#talents" data-section-target="talents"  class="navigation">Talente</a></h2>
                     </li>
-                    <li><h2><a href="#ranged">Fernwaffen</a></h2>
+                    <li><h2><a href="#spells" data-section-target="spells"  class="navigation">Zauber</a></h2>
                     </li>
-                    <li><h2><a href="#armor">Rüstungen</a></h2>
+                    <li><h2><a href="#weapons" data-section-target="weapons" class="navigation">Nahkampfwaffen</a></h2>
                     </li>
-                    <li><h2><a href="#talents">Talente</a></h2>
+                    <li><h2><a href="#ranged" data-section-target="ranged"  class="navigation">Fernwaffen</a></h2>
+                    </li>
+                    <li><h2><a href="#armor" data-section-target="armor"  class="navigation">Rüstungen</a></h2>
                     </li>
                 </ul>
             </div>
@@ -41,7 +43,7 @@
 
                     <!-- CHARACTER -->
                     <a name="characters"></a>
-                    <div class="section">
+                    <div class="section" data-section="characters">
                         <div>
                             <h1>
                                 <h1 class="section-title">
@@ -74,7 +76,7 @@
 
                     <!-- MELEE WEAPONS -->
                     <a name="weapons"></a>
-                    <div class="section">
+                    <div class="section" data-section="weapons">
                         <div>
                             <h1>
                                 <h1 class="section-title">
@@ -109,7 +111,7 @@
 
                     <!-- RANGED WEAPONS -->
                     <a name="ranged"></a>
-                    <div class="section">
+                    <div class="section" data-section="ranged">
                         <div>
                             <h1>
                                 <h1 class="section-title">
@@ -144,7 +146,7 @@
 
                     <!-- ARMOR -->
                     <a name="armor"></a>
-                    <div class="section">
+                    <div class="section" data-section="armor">
                         <div>
                             <h1>
                                 <h1 class="section-title">
@@ -179,7 +181,7 @@
 
                     <!-- TALENTS -->
                     <a name="talents"></a>
-                    <div class="section">
+                    <div class="section" data-section="talents">
                         <div>
                             <h1>
                                 <h1 class="section-title">
@@ -219,6 +221,58 @@
                             </div>
                         </div>
                     </div>
+
+
+
+
+                    <!-- SPELLS -->
+                    <a name="spells"></a>
+                    <div class="section" data-section="spells">
+                        <div>
+                            <h1>
+                                <h1 class="section-title">
+                                    <a id="menu-toggle" href="#" class="btn btn-default">
+                                      <!-- <i class="icon-bar"></i> -->
+                                      <span class="glyphicon glyphicon-align-justify"></span>
+                                    </a>
+                                    <img src="icons/smoking-finger.svg" class="invert">
+                                    Zauber
+                                </h1>
+                            </h1>
+                        </div>
+                        <!-- filter -->
+                       <!--  <span class="form-group selects">
+                            <label>Klasse</label>
+                            <select class="form-control" id="spell-class"></select>
+                        </span>
+                        <span class="form-group selects">
+                            <label>Stufe</label>
+                            <select class="form-control" id="spell-level"></select>
+                        </span> -->
+                        <div class="row">
+                            <div class="table-responsive">
+                              <table class="table table-bordered data-spells tablesorter" data-sortlist="[[0,0]]">
+                                <thead>
+                                  <tr>
+                                    <th class="center details-header">&nbsp;</th>
+                                    <th class="id">Name</th>
+                                    <th class="">Effekt</th>
+<!--                                     <th class="center">Stufe</th>
+                                    <th class="center">Ränge</th> -->
+                                     <th class="center">Preis</th>
+                                    <th class="center">Bonus</th>
+                                    <th class="center">Dauer</th>
+                                    <th class="center">Abklingzeit</th>
+                                    <th class="center">Typ</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                              </table>
+                            </div>
+                        </div>
+                    </div>
+
 
                 </div>
             </div>
