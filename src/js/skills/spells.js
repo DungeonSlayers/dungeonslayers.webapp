@@ -19,7 +19,6 @@ define('skills/spells', ['data'], function (data) {
 
             function add(id, data) {
                 var node = $('<tr>').attr('data-id', id);
-                debugger;
                 //create node
                 node.append(
                     $('<td class="details">').append(
