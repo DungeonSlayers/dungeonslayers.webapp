@@ -35,7 +35,11 @@ define('items/armor', ['data'], function (data) {
                         add(value);
                     });
                     $('.data-armor').tablesorter({
-                        sortList: [[0, 0]]
+                        sortList: [[0, 0]],
+                        theme: 'bootstrap',
+                        widthFixed: true,
+                        headerTemplate: '{content} {icon}',
+                        widgets : ['uitheme']
                     });
                 }
             );

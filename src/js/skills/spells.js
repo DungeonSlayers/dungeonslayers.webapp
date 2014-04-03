@@ -5,7 +5,8 @@ define('skills/spells', ['data'], function (data) {
     return {
 
         init: function () {
-            var hash = {};
+            var hash = {},
+                Opentip = window.Opentip;
 
             Opentip.styles.ds = {
                 title: 'hover',
@@ -48,7 +49,11 @@ define('skills/spells', ['data'], function (data) {
                     });
 
                     $('.data-spells').tablesorter({
-                        sortList: [[0, 0]]
+                        sortList: [[0, 0]],
+                        theme: 'bootstrap',
+                        widthFixed: true,
+                        headerTemplate: '{content} {icon}',
+                        widgets : ['uitheme']
                     });
                 }
             );

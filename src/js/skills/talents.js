@@ -6,7 +6,8 @@ define('skills/talents', ['data'], function (data) {
 
         init: function () {
 
-            var hash = {};
+            var hash = {},
+                Opentip = window.Opentip;
 
             Opentip.styles.ds = {
                 title: 'hover',
@@ -45,8 +46,13 @@ define('skills/talents', ['data'], function (data) {
                         add(id, value);
                     });
 
+
                     $('.data-talents').tablesorter({
-                        sortList: [[0, 0]]
+                        sortList: [[0, 0]],
+                        theme: 'bootstrap',
+                        widthFixed: true,
+                        headerTemplate: '{content} {icon}',
+                        widgets : ['uitheme']
                     });
                 }
             );

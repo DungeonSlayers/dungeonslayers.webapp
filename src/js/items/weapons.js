@@ -41,10 +41,18 @@ define('items/weapons', ['data'], function (data) {
                         add(value);
                     });
                     $('.data-weapons').tablesorter({
-                        sortList: [[0, 0]]
+                        sortList: [[0, 0]],
+                        theme: 'bootstrap',
+                        widthFixed: true,
+                        headerTemplate: '{content} {icon}',
+                        widgets : ['uitheme']
                     });
                     $('.data-ranged').tablesorter({
-                        sortList: [[0, 0]]
+                        sortList: [[0, 0]],
+                        theme: 'bootstrap',
+                        widthFixed: true,
+                        headerTemplate: '{content} {icon}',
+                        widgets : ['uitheme']
                     });
                 }
             );
