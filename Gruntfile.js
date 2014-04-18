@@ -7,8 +7,16 @@ module.exports = function (grunt) {
     // Initializes the Grunt tasks with the following settings
     grunt.initConfig({
         pkg: pkg,
-        jshint:  require('./tasks/jshint.js'),
         svgmin:  require('./tasks/svgmin.js'),
+        clean: require('./tasks/clean.js'),
+        copy: require('./tasks/copy.js'),
+        cssmin: require('./tasks/cssmin.js'),
+        htmlmin: require('./tasks/htmlmin.js'),
+        jshint: require('./tasks/jshint.js'),
+        manifest: require('./tasks/manifest.js'),
+        smoosher: require('./tasks/smoosher.js'),
+        uglify: require('./tasks/uglify.js'),
+        uncss: require('./tasks/uncss.js'),
         'curl-dir': {
           'src/icons' : [
             //'http://game-icons.net/archives/svg/zip/game-icons.net.svg.zip',
@@ -32,11 +40,38 @@ module.exports = function (grunt) {
     // Load the plugins that provide the tasks we specified in package.json.
     grunt.loadNpmTasks('grunt-curl');
     grunt.loadNpmTasks('grunt-contrib-jshint');
-grunt.loadNpmTasks('grunt-svgmin'); 
+    grunt.loadNpmTasks('grunt-svgmin');
+    grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-contrib-htmlmin');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-html-smoosher');
+    grunt.loadNpmTasks('grunt-manifest');
+    grunt.loadNpmTasks('grunt-uncss');
 
 
     //get font
     grunt.registerTask('curl', ['curl-dir']);
     grunt.registerTask('default', ['jshint']);
+    grunt.registerTask('build', [
+        //check jss
+        'jshint',
+        //clean old build
+        'clean',
+        //copy root and img files
+        'copy',
+        //remove unused bootstrap styles
+        //'uncss',
+        //minify html/js/css
+        'htmlmin',
+        //'uglify',
+        'cssmin',
+        //add external js/css inline
+        //'smoosher',
+        //'clean:tmp',
+        //create manifest file
+        'manifest'
+    ]);
 
 };

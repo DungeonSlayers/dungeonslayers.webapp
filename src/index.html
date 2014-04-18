@@ -7,12 +7,11 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <link rel="icon" type="img/ico" href="ico/favicon.ico">
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <!-- <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
+
+        <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <link href="css/simple-sidebar.css" rel="stylesheet">
-        <link href="css/opentip.css" rel="stylesheet">
-        <link href="css/theme.bootstrap.css" rel="stylesheet">
-        <link rel="stylesheet" href="css/main.css">
+        <link href="lib/opentip/css/opentip.css" rel="stylesheet">
+        <link href="css/main.css" rel="stylesheet">
     </head>
     <body>
 
@@ -225,7 +224,6 @@
 
 
 
-
                     <!-- SPELLS -->
                     <a name="spells"></a>
                     <div class="section" data-section="spells">
@@ -273,22 +271,23 @@
                             </div>
                         </div>
                     </div>
-
-
                 </div>
             </div>
         </div>
 
-        <script src="vendor/jquery-1.10.1.min.js"></script>
-        <script src="vendor/jquery.tablesorter.min.js"></script>
-        <script src="vendor/jquery.tablesorter.widgets.min.js"></script>
-        <script src="vendor/opentip-jquery.min.js"></script>
-        <script src="vendor/lodash.js"></script>
-        <script src="vendor/backbone.js"></script>
-        <script src="vendor/backbone.localStorage-min.js"></script>
-        <script src="vendor/bootstrap.min.js"></script>
+        <!-- jquery and plugins-->
+        <script src="lib/jquery/js/jquery-1.10.1.min.js"></script>
+        <script src="lib/jquery.tablesorter/js/jquery.tablesorter.min.js"></script>
+        <script src="lib/jquery.tablesorter/js/jquery.tablesorter.widgets.min.js"></script>
         <script src="js/plugins.js"></script>
-        <script src="vendor/require.js" data-main='js/main'></script>
+        <!-- jquery and plugins-->
+        <script src="lib/opentip/js/opentip-jquery.min.js"></script>
+        <script src="lib/lodash.js"></script>
+        <!-- backbone and plugins-->
+        <script src="lib/backbone.js"></script>
+        <script src="lib/backbone.localStorage-min.js"></script>
+        <!-- require js -->
+        <script src="lib/require.js" data-main='js/main'></script>
 
     </body>
 </html>

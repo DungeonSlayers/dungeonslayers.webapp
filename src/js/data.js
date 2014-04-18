@@ -6,8 +6,9 @@ define('data', [], function () {
         BASE_FALLBACK = 'data/',
         data = {},
         get = function (id, base) {
-            var def = $.Deferred(),
-                base = base || BASE;
+            var def = $.Deferred();
+            //default
+            base = base || BASE;
 
             if (!data[id]) {
                 //server
@@ -15,7 +16,7 @@ define('data', [], function () {
                     data[id] = response[id] ? response[id] : response;
                     def.resolve(data[id]);
                 }).then(undefined, function () {
-                    //fallback 
+                    //fallback
                     $.getJSON(BASE_FALLBACK + id + '.min.json', function (response) {
                         data[id] = response[id] ? response[id] : response;
                         def.resolve(data[id]);
