@@ -9,6 +9,7 @@
             "requirejs": "~2.1",
             "backbone.localstorage": "~1.1",
             "opentip": "~2.4",
-            "tablesorter": "https://github.com/Mottie/tablesorter.git"
+            "tablesorter": "https://github.com/Mottie/tablesorter.git",
+            "dungeonslayersjson": "https://github.com/DungeonSlayers/dungeonslayers.json.git"
         }
 }
