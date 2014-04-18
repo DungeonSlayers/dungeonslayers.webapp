@@ -1,0 +1,32 @@
+CACHE MANIFEST
+# Time: Fri Apr 18 2014 14:22:16 GMT+0300 (Türkei Sommerzeit)
+
+CACHE:
+index.html
+img/defense.png
+img/hit-points.png
+img/initiative.png
+img/melee-attack.png
+img/movement-rate.png
+img/ranged-attack.png
+img/spellcasting.png
+img/targeted-spellcasting.png
+js/character/collection.js
+js/character/main.js
+js/character/model.js
+js/character/view.js
+js/data.js
+js/items/armor.js
+js/items/weapons.js
+js/main.js
+js/plugins.js
+js/skills/spells.js
+js/skills/talents.js
+lib/bootstrap/css/bootstrap.min.css
+lib/opentip/css/opentip.css
+
+NETWORK:
+http://*
+https://*
+
+FALLBACK:
