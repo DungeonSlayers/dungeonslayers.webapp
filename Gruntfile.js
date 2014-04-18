@@ -8,6 +8,7 @@ module.exports = function (grunt) {
     grunt.initConfig({
         pkg: pkg,
         jshint:  require('./tasks/jshint.js'),
+        svgmin:  require('./tasks/svgmin.js'),
         'curl-dir': {
           'src/icons' : [
             //'http://game-icons.net/archives/svg/zip/game-icons.net.svg.zip',
@@ -31,6 +32,7 @@ module.exports = function (grunt) {
     // Load the plugins that provide the tasks we specified in package.json.
     grunt.loadNpmTasks('grunt-curl');
     grunt.loadNpmTasks('grunt-contrib-jshint');
+grunt.loadNpmTasks('grunt-svgmin'); 
 
 
     //get font
